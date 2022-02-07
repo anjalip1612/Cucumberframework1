@@ -15,10 +15,10 @@ public class ToolsDemoCheckoutPage {
 
 		// define all elements fo the page
 		@FindBy(xpath="//a[contains(text(),'checkout')]")
-		WebElement checkOutBtn;
+		private WebElement checkOutBtn;
 
 		// define methods to perform actions
-		public void clickSearchBtn() {
+		public void clickChkoutBtn() {
 			checkOutBtn.click();
 	}
 }

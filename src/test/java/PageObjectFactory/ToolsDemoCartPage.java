@@ -17,25 +17,25 @@ public class ToolsDemoCartPage {
 
 	// define all elements fo the page
 	@FindBy(id = "pa_color")
-	WebElement dropdwncolor;
+	private WebElement dropdwncolor;
 
 	@FindBy(id = "pa_size")
-	WebElement dropdwnsize;
+	private WebElement dropdwnsize;
 	
 	@FindBy(className="reset_variations")
-	WebElement clear;
+	private WebElement clear;
 	
 	@FindBy(className="icon_minus-06")
-	WebElement minus;
+	private WebElement minus;
 	
 	@FindBy(className="icon_plus")
-	WebElement plus;
+	private WebElement plus;
 	
 	@FindBy(xpath="//button[contains(text(),'Add to cart')]")
-	WebElement addToCart;
+	private WebElement addToCart;
 	
 	@FindBy(className="cart-name-and-total")
-	WebElement cart;
+	private WebElement cart;
 	
 
 	// define methods to perform actions

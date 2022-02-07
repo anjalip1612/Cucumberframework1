@@ -16,10 +16,10 @@ public class ToolsDemoHomePage {
 
 	// define all elements fo the page
 	@FindBy(className = "icon_search")
-	WebElement searchBtn;
+	private WebElement searchBtn;
 	
 	@FindBy(className = "form-control")
-	WebElement txtBox;
+	private WebElement txtBox;
 	
 
 	// define methods to perform actions

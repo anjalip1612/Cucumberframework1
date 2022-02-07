@@ -20,43 +20,43 @@ public class ToolsDemoConfirmationPage {
 
 	// define all elements fo the page
 	@FindBy(id = "billing_first_name")
-	WebElement firstNametxtbox;
+	private WebElement firstNametxtbox;
 
 	@FindBy(id = "billing_last_name")
-	WebElement lastNametxtbox;
+	private WebElement lastNametxtbox;
 
 	@FindBy(id = "billing_company")
-	WebElement compNametxtbox;
+	private WebElement compNametxtbox;
 
 	@FindBy(id = "billing_country")
-	WebElement country;
+	private WebElement country;
 
 	@FindBy(id = "billing_address_1")
-	WebElement billingAddress1;
+	private WebElement billingAddress1;
 
 	@FindBy(id = "billing_address_2")
-	WebElement billingAddress2;
+	private WebElement billingAddress2;
 
 	@FindBy(id = "billing_city")
-	WebElement billingCity;
+	private WebElement billingCity;
 
 	@FindBy(id = "billing_state")
-	WebElement state;
+	private WebElement state;
 
 	@FindBy(id = "billing_postcode")
-	WebElement billingPostcode;
+	private WebElement billingPostcode;
 
 	@FindBy(id = "billing_phone")
-	WebElement billingPhone;
+	private WebElement billingPhone;
 
 	@FindBy(id = "billing_email")
-	WebElement billingEmail;
+	private WebElement billingEmail;
 
-	@FindBy(how = How.CSS, using = "#terms.input-checkbox") 
+	@FindBy(xpath = "//input[@id='terms']")
 	private WebElement chkbx_AcceptTermsAndCondition;
 
 	@FindBy(id = "place_order")
-	WebElement placeOrder;
+	private WebElement placeOrder;
 
 	// define methods to perform actions
 	public void setFirstName(String firstName) {
@@ -72,7 +72,7 @@ public class ToolsDemoConfirmationPage {
 	}
 
 	public void selectCountryName(String inputcountryName) {
-		Select sel=new Select(country);
+		Select sel = new Select(country);
 		sel.selectByVisibleText(inputcountryName);
 	}
 
@@ -89,7 +89,7 @@ public class ToolsDemoConfirmationPage {
 	}
 
 	public void setStateName(String statename) {
-		Select sel=new Select(state);
+		Select sel = new Select(state);
 		sel.selectByVisibleText(statename);
 	}
 
@@ -105,8 +105,8 @@ public class ToolsDemoConfirmationPage {
 		billingEmail.sendKeys(email);
 	}
 
-	public void check_TermsAndCondition(boolean value) {
-		if(value) chkbx_AcceptTermsAndCondition.click();
+	public void check_TermsAndCondition() {
+		chkbx_AcceptTermsAndCondition.click();
 	}
 
 	public void clickPlaceOrder() {
